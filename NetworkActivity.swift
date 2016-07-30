@@ -14,14 +14,14 @@ public class NetworkActivity {
     
     public class func start() {
         dispatch_async(serialQueue) {
-            NetworkActivityCount++
+            NetworkActivityCount += 1
             NetworkActivity.updateNetworkStatus()
         }
     }
     
     public class func stop() {
         dispatch_async(serialQueue) {
-            NetworkActivityCount--
+            NetworkActivityCount -= 1
             NetworkActivity.updateNetworkStatus()
         }
     }
